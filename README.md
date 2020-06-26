@@ -4,7 +4,7 @@
 
 ## Project Links
 
-- [https://github.com/tylerdavisgit/WuTang-Song-for-That]()
+- [Git Repo](https://github.com/tylerdavisgit/WuTang-Song-for-That)
 - [add your deployment link]()
 
 ## Project Description
@@ -73,22 +73,24 @@ The key difference between the mobile and tablet/desktop version will be the mob
 
 ## Wireframes
 
-- [add link to your wireframes]()
-- [add link to your react architecture]()
+- [Landing](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/1Project_2_Mobile_Wireframe_AppLanding_rxqpuy.jpg)
+- [Mobile Nav](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/2Project_2_Mobile_Wireframe_MobileNav_qejepu.jpg)
+- [Entry Results](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/3Project_2_Mobile_Wireframe_Entry_Result_ugken2.jpg)
+- [About Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/4Project_2_Mobile_Wireframe_AboutPage_sbamsy.jpg)
+- [Members Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/5Project_2_Mobile_Wireframe_MemberPage_vt5vi6.jpg)
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
+#### MVP
 
-#### MVP EXAMPLE
+- Must properly route data as to conduct search of lyrics
+- Must build all components to have basic structure
+- The user search must return the Lyrics, and Title of the song containing their search query.
 
-- Find and use external api
-- Render data on page
-- Allow user to interact with the page
+#### PostMVP
 
-#### PostMVP EXAMPLE
-
-- Add localStorage or firebase for storage
+- The members page should have links to their respective wikipedia pages
+- the styling should perfectly match the wireframes
 
 ## Components
 
