@@ -79,6 +79,10 @@ The key difference between the mobile and tablet/desktop version will be the mob
 - [About Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/4Project_2_Mobile_Wireframe_AboutPage_sbamsy.jpg)
 - [Members Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/5Project_2_Mobile_Wireframe_MemberPage_vt5vi6.jpg)
 
+### React Structure
+
+[Component Chain](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593194992/PROJECT%202/WireFrames/Project2ReactStructure_pkek79.jpg)
+
 ### MVP/PostMVP
 
 #### MVP
@@ -101,6 +105,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component         |                                                                    Description                                                                     |
 | ----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------: |
 | App               | This will make the initial data pull and include React Router. This will be the landing page where the form is located, along with the navigation. |
+| Results           |                                              This will contain the result listings that are returned.                                              |
 | Header            |                                                    This will render the header include the nav                                                     |
 | Form              |                                 This will be where the user inputs the word/phrase. It will live on the home page.                                 |
 | About             |                            This component will be linked from the navigation and contain general info about the group.                             |
