@@ -9,7 +9,7 @@
 
 ## Project Description
 
-This React app will contain a form in which a user can input a phrase. That phrase will then be run through a collection of Wu-Tang clan song lyrics. If there is a song in the library containing that word or phrase, the app will return the title and lyrics. It will also have an about section for the group, as well as a section with illustrations and a brief rundown of each member.
+This React app will contain a form in which a user can input a phrase. That phrase will then be run through a collection of Wu-Tang Clan song lyrics. If there is a song in the library containing that word or phrase, the app will return the title and lyrics. It will also have an about section for the group, as well as a section with illustrations and a brief rundown of each member.
 
 The key difference between the mobile and tablet/desktop version will be the mobile navigation menu that pops up full screen. The Tablet and Desktop versions will have individual links in the navigation instead of the hamburger icon.
 
