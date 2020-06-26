@@ -74,7 +74,7 @@ The key difference between the mobile and tablet/desktop version will be the mob
 ## Wireframes
 
 - [Landing](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/1Project_2_Mobile_Wireframe_AppLanding_rxqpuy.jpg)
-- [Mobile Nav](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593193060/PROJECT%202/WireFrames/Project_2_Mobile_Wireframe_MobileNav_filabz.psd)
+- [Mobile Nav](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593193175/PROJECT%202/WireFrames/2Project_2_Mobile_Wireframe_MobileNav_copy_ern7x9.jpg)
 - [Entry Results](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/3Project_2_Mobile_Wireframe_Entry_Result_ugken2.jpg)
 - [About Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/4Project_2_Mobile_Wireframe_AboutPage_sbamsy.jpg)
 - [Members Page](https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593190688/PROJECT%202/WireFrames/5Project_2_Mobile_Wireframe_MemberPage_vt5vi6.jpg)
