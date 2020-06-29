@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Form from "./Components/Form";
 import About from "./Components/About";
 import Members from "./Components/Members";
 import Burger from "./Components/Burger";
+import BurgerMenu from "./Components/BurgerMenu";
 import { Route, Link, Switch } from "react-router-dom";
 
 function App() {
+  // Toggle Mobile Nav
+  const [open, setOpen] = useState(false);
+  const handleOpen = (open) => {
+    setOpen(open);
+  };
+
   return (
     <div className="App">
       <nav id="deskNav">
@@ -16,8 +23,9 @@ function App() {
             alt="Wu-Tang Song for That..."
           />
         </Link>
-        <Burger />
-        <ul>
+        <Burger open={open} setOpen={handleOpen} />
+        <BurgerMenu open={open} setOpen={handleOpen} />
+        <ul id="desk-ul">
           <Link to="/" style={{ textDecoration: "none" }}>
             <h3>Home</h3>
           </Link>

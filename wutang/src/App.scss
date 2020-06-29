@@ -23,7 +23,7 @@ img {
 #deskNav {
   display: flex;
   flex-direction: column;
-  ul {
+  #desk-ul {
     display: flex;
     justify-content: flex-end;
     background-color: white;
@@ -60,6 +60,42 @@ img {
     background-color: rgb(110, 9, 38);
     box-shadow: 2px 2px rgb(141, 141, 141);
   }
+}
+
+#burger-menu {
+  display: flex;
+  position: relative;
+  #closed-burger-menu-list {
+    display: none;
+  }
+  .burger-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    height: 50px;
+    font-size: 20px;
+    width: 80%;
+    border: 5px solid rgb(110, 9, 38);
+    color: rgb(110, 9, 38);
+    text-shadow: 2px 2px 1px rgb(141, 141, 141);
+  }
+}
+
+#open {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  margin-left: -10px;
+  margin-top: -275px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  position: fixed;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  color: rgb(110, 9, 38);
 }
 
 #form {
@@ -156,7 +192,7 @@ form {
   #deskNav {
     display: flex;
     flex-direction: column;
-    ul {
+    #desk-ul {
       display: none;
       justify-content: flex-end;
       background-color: white;
@@ -172,6 +208,9 @@ form {
 
 @media only screen and (min-width: 768px) {
   #burger {
+    display: none;
+  }
+  #burger-menu {
     display: none;
   }
 }
