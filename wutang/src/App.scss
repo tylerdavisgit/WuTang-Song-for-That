@@ -1,0 +1,177 @@
+.App {
+  padding-top: 25px;
+  text-align: center;
+  width: 100vw;
+  background-color: rgb(110, 9, 38);
+  align-items: center;
+  font-family: helvetica, sans-serif;
+  border: 2px solid black;
+}
+
+h3 {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  height: 200px;
+  padding-right: 10px;
+  margin-bottom: -45px;
+}
+
+#deskNav {
+  display: flex;
+  flex-direction: column;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    h3 {
+      color: black;
+      padding-right: 15px;
+      text-shadow: 2px 1px 2px rgb(110, 9, 38);
+    }
+  }
+}
+
+#burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 55px;
+  margin-top: 15px;
+  background-color: white;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+
+  #burger-span {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  #burger-span span {
+    height: 3px;
+    width: 30px;
+    margin-bottom: 5px;
+    display: block;
+    background-color: rgb(110, 9, 38);
+    box-shadow: 2px 2px rgb(141, 141, 141);
+  }
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  border: 2px solid black;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+#form-call-to-action {
+  font-family: helvetica, sans-serif;
+  word-spacing: -2px;
+  letter-spacing: -3px;
+  color: white;
+  width: 225px;
+  text-align: left;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 35px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: -1px;
+    word-spacing: -2px;
+    font-weight: 600;
+  }
+  button {
+    height: 35px;
+    width: 60%;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    border: none;
+    text-shadow: 2px 2px 1px rgb(110, 9, 38);
+  }
+}
+
+#about {
+  color: white;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1500px;
+  border: 2px solid black;
+  margin-top: -20px;
+  h1 {
+    font-family: helvetica, sans-serif;
+    word-spacing: -2px;
+    letter-spacing: -3px;
+    color: white;
+    width: 225px;
+    text-align: left;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 35px;
+  }
+  p {
+    font-family: helvetica, sans-serif;
+    word-spacing: -1px;
+    letter-spacing: -2px;
+    color: white;
+    width: 60vw;
+    height: 100vh;
+    text-align: left;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    font-weight: 525;
+  }
+  #wiki {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #deskNav {
+    display: flex;
+    flex-direction: column;
+    ul {
+      display: none;
+      justify-content: flex-end;
+      background-color: white;
+      border: 5px solid black;
+      h3 {
+        color: black;
+        padding-right: 15px;
+        text-shadow: 2px 1px 2px rgb(110, 9, 38);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+}
