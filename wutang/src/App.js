@@ -7,6 +7,7 @@ import Burger from "./Components/Burger";
 import BurgerMenu from "./Components/BurgerMenu";
 import Results from "./Components/Results";
 import { Route, Link, Switch } from "react-router-dom";
+import Welcome from "./Components/Welcome";
 
 function App() {
   // Toggle Mobile Nav
@@ -17,7 +18,8 @@ function App() {
   };
 
   // Functionality States
-
+  const [submitFormHide, setSubmitFormHide] = useState(false);
+  const [toggleResults, setToggleResults] = useState(false);
   const [search, setSearch] = useState("");
   const [songArr, setSongArr] = useState([]);
   const [resultsArr, setResultsArr] = useState([]);
@@ -25,7 +27,7 @@ function App() {
 
   const handleSubmit = () => {
     console.log("HANDLE SUBMIT");
-    const warning = "There's no Wu-Tang Song for That";
+    const warning = `${search}      ...There's no Wu-Tang Song for That`;
     const searchQuery = search.toLowerCase();
     console.log(searchQuery);
     const results = songArr.filter((object) =>
@@ -37,8 +39,10 @@ function App() {
     } else {
       setResultsString(search);
     }
+    setToggleResults(true);
     console.log(results);
     console.log(resultsString);
+    setSubmitFormHide(true);
   };
 
   const handleChange = (e) => {
@@ -93,7 +97,7 @@ function App() {
   return (
     <div className="App">
       <nav id="deskNav">
-        <Link to="/">
+        <Link to="/form">
           <img
             src="https://res.cloudinary.com/tylerdavisfilms/image/upload/v1593205950/PROJECT%202/wulogo_gyxc70.png"
             alt="Wu-Tang Song for That..."
@@ -102,43 +106,40 @@ function App() {
         <Burger open={open} setOpen={handleOpen} />
         <BurgerMenu open={open} setOpen={handleOpen} />
         <ul id="desk-ul">
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/form" style={{ textDecoration: "none" }}>
             <h3>Home</h3>
           </Link>
-          <Link to="/About" style={{ textDecoration: "none" }}>
+          <Link to="/about" style={{ textDecoration: "none" }}>
             <h3>About</h3>
           </Link>
-          <Link to="/Members" style={{ textDecoration: "none" }}>
+          <Link to="/members" style={{ textDecoration: "none" }}>
             <h3>Wu-Tang Members</h3>
           </Link>
         </ul>
       </nav>
 
+      {toggleResults === true ? (
+        <Results resultsString={resultsString} resultsArr={resultsArr} />
+      ) : (
+        ""
+      )}
+
       <Switch>
+        <Route exact path="/" component={Welcome} />
         <Route
-          path="/"
           exact
+          path="/form"
           render={(routerProps) => (
             <Form
-              {...routerProps}
               handleSubmit={handleSubmit}
               handleChange={handleChange}
+              submitFormHide={submitFormHide}
             />
           )}
         />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Members" component={Members} />
-        <Route
-          exact
-          path="/Results"
-          render={(routerProps) => (
-            <Results
-              {...routerProps}
-              resultsString={resultsString}
-              resultsArr={resultsArr}
-            />
-          )}
-        />
+        <Route exact path="/results" component={Results} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/members" component={Members} />
       </Switch>
     </div>
   );

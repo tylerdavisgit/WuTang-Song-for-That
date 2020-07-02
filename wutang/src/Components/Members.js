@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Members() {
+  function refresh() {
+    window.location.reload(false);
+  }
   return (
-    <>
+    <div id="members-page">
       <div id="members">
         <a href="https://en.wikipedia.org/wiki/RZA" target="_blank">
           <div className="member-card">
@@ -102,11 +105,11 @@ export default function Members() {
           </div>
         </a>
         <button>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/form" style={{ textDecoration: "none" }}>
             HOME
           </Link>
         </button>
       </div>
-    </>
+    </div>
   );
 }

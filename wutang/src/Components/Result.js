@@ -1,13 +1,11 @@
 import React from "react";
 
-export default function Result(resultsArr) {
-  console.log(resultsArr);
+export default function Result({ song }) {
   return (
-    <div>
-      <li>
-        Song: {resultsArr.track_name}
-        Lyrics: {resultsArr.lyrics}
-      </li>
-    </div>
+    <li>
+      <h3>Song: {song.trackname}</h3>
+      <h3>Lyrics:</h3>
+      <p>{song.lyrics}</p>
+    </li>
   );
 }
