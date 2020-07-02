@@ -1,3 +1,21 @@
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes transitionOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .App {
   padding-top: 25px;
   text-align: center;
@@ -6,6 +24,7 @@
   align-items: center;
   font-family: helvetica, sans-serif;
   border: 2px solid black;
+  text-shadow: 2px 2px 1px black;
 }
 
 h3 {
@@ -23,16 +42,33 @@ img {
 #deskNav {
   display: flex;
   flex-direction: column;
+
   #desk-ul {
     display: flex;
+    padding-right: 15px;
+    align-items: center;
     justify-content: flex-end;
     background-color: white;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
+    height: 60px;
     h3 {
+      display: flex;
+      align-items: center;
       color: black;
       padding-right: 15px;
+      padding-left: 10px;
       text-shadow: 2px 1px 2px rgb(211, 160, 20);
+      transition: 0.25s;
+      margin-left: 1px;
+      margin-right: 1px;
+      height: 50px;
+    }
+    h3:hover {
+      color: white;
+      border: 2px solid black;
+      text-shadow: 2px 2px 1px black;
+      background-color: rgb(211, 160, 20);
     }
   }
 }
@@ -40,6 +76,7 @@ img {
 #burger {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-end;
   width: 100%;
   height: 55px;
@@ -103,7 +140,6 @@ img {
   flex-direction: column;
   height: 100vh;
   align-items: center;
-  border: 2px solid black;
   margin-top: -20px;
   padding-top: 20px;
 }
@@ -119,6 +155,7 @@ img {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 35px;
+  animation: transitionIn 2s;
 }
 
 form {
@@ -126,6 +163,8 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: transitionIn 2.5s;
+
   input {
     width: 100%;
     height: 40px;
@@ -145,6 +184,12 @@ form {
     margin-top: 5px;
     border: none;
     text-shadow: 2px 2px 1px rgb(211, 160, 20);
+    transition: 0.5s;
+  }
+  button:hover {
+    border: 2px solid white;
+    color: black;
+    background-color: rgb(211, 160, 20);
   }
 }
 
@@ -155,8 +200,9 @@ form {
   flex-direction: column;
   align-items: center;
   height: 1500px;
-  border: 2px solid black;
-  margin-top: -20px;
+  margin-top: -35px;
+  animation: transitionIn 2s;
+
   h1 {
     font-family: helvetica, sans-serif;
     word-spacing: -2px;
@@ -170,21 +216,70 @@ form {
     font-size: 35px;
   }
   p {
+    margin-top: -10px;
     font-family: helvetica, sans-serif;
     word-spacing: -1px;
     letter-spacing: -2px;
     color: white;
-    width: 60vw;
+    width: 65vw;
     height: 100vh;
     text-align: left;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 25px;
-    font-weight: 525;
+    font-weight: 550;
   }
   #wiki {
     margin-top: 5px;
+  }
+}
+
+#members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  animation: transitionIn 2s;
+
+  h2 {
+    text-shadow: 2px 2px 1px black;
+  }
+  h3 {
+    text-shadow: 2px 2px 1px black;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .member-card {
+    height: 350px;
+    width: 250px;
+    border: 2px solid white;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.5s;
+  }
+  .member-card:hover {
+    background-color: black;
+    color: rgb(211, 160, 20);
+    text-shadow: 2px 2px 2px white;
+  }
+  img {
+    height: 200px;
+  }
+  button {
+    height: 40px;
+    width: 100px;
+    margin-top: 25px;
+    border: 2px solid white;
+    background-color: black;
+  }
+  button:hover {
+    background-color: rgb(211, 160, 20);
+    color: white;
+    text-shadow: 2px 2px 2px black;
   }
 }
 
