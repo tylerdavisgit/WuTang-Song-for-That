@@ -1,0 +1,26 @@
+#welcome-container {
+  margin: 20px auto;
+  display: flex;
+  width: 280px;
+  padding-left: 30px;
+  flex-direction: column;
+  align-content: center;
+  align-content: center;
+  border: 2px solid white;
+  transition: 0.5s;
+
+  h1 {
+    display: flex;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  h2 {
+    text-align: left;
+  }
+}
+
+#welcome-container:hover {
+  text-shadow: 3px 3px 2px rgb(211, 160, 20);
+  background-color: black;
+}

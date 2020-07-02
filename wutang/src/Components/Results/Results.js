@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Result from "./Result";
+import "./Results.scss";
+import Result from "../Result/Result";
 
 export default function Results({ resultsArr, resultsString }) {
   console.log("resultsArr", resultsArr);

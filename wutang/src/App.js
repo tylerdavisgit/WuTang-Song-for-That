@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
-import Form from "./Components/Form";
-import About from "./Components/About";
-import Members from "./Components/Members";
-import Burger from "./Components/Burger";
-import BurgerMenu from "./Components/BurgerMenu";
-import Results from "./Components/Results";
+import Form from "./Components/Form/Form";
+import About from "./Components/About/About";
+import Members from "./Components/Members/Members";
+import Burger from "./Components/Burger/Burger";
+import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
+import Results from "./Components/Results/Results";
 import { Route, Link, Switch } from "react-router-dom";
-import Welcome from "./Components/Welcome";
+import Welcome from "./Components/Welcome/Welcome";
 
 function App() {
   // Toggle Mobile Nav
@@ -49,19 +49,15 @@ function App() {
     const search = e.target.value;
     setSearch(search);
   };
-  // API Data Fetching: Get Track ID, Song Title, use MAP to create array with the addition of Lyric URL's.
-  // Use .forEach to loop through lyric urls to get lyric string and push objects with the song title and lyric string to songArr state.
-  //  API KEYS = 444874118958b4e7d6ec1f96f34281b1   &          c911372fc85e0cabc02b42439e19ecfb
 
   useEffect(() => {
     const corsPrefixUrl = `https://cors-anywhere.herokuapp.com/`;
-    const apiKey = `444874118958b4e7d6ec1f96f34281b1`;
-    // const apiKey = `444874118958b4e7d6ec1f96f34281b1`;
+    const apiKey = process.env.REACT_APP_WUTANG_API_KEY;
 
     const albumUrl = `${corsPrefixUrl}https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=20422443&page=1&apikey=${apiKey}`;
 
     gatherTrackInfo(corsPrefixUrl, apiKey, albumUrl);
-  }, []);
+  });
 
   const gatherTrackInfo = async (corsPrefixUrl, apiKey, albumUrl) => {
     const res = await fetch(albumUrl);
@@ -91,8 +87,6 @@ function App() {
         setSongArr(temp);
       });
   };
-
-  console.log(songArr);
 
   return (
     <div className="App">

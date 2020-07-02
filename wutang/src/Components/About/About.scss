@@ -1,0 +1,41 @@
+#about {
+  color: white;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1500px;
+  animation: transitionIn 2s;
+  background-color: rgb(211, 160, 20);
+
+  h1 {
+    font-family: helvetica, sans-serif;
+    word-spacing: -2px;
+    letter-spacing: -3px;
+    color: white;
+    width: 225px;
+    text-align: left;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 35px;
+  }
+  p {
+    margin-top: -10px;
+    font-family: helvetica, sans-serif;
+    word-spacing: -1px;
+    letter-spacing: -2px;
+    color: white;
+    width: 65vw;
+    height: 100vh;
+    text-align: left;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    font-weight: 550;
+  }
+  #wiki {
+    margin-top: 5px;
+  }
+}

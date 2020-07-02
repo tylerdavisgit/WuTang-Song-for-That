@@ -1,4 +1,5 @@
 import React from "react";
+import "./BurgerMenu.scss";
 import { Link } from "react-router-dom";
 
 export default function BurgerMenu({ open, setOpen }) {

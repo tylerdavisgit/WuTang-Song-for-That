@@ -9,9 +9,11 @@
 
 ## Project Description
 
-This React app will contain a form in which a user can input a phrase. That phrase will then be run through a collection of Wu-Tang Clan song lyrics. If there is a song in the library containing that word or phrase, the app will return the title and lyrics. It will also have an about section for the group, as well as a section with illustrations and a brief rundown of each member.
+This React app contains a form in which a user can input a phrase. That phrase is run through a collection of Wu-Tang Clan song lyrics from the album "Playlist: The Very Best of Wu-Tang Clan." If there is a song in the collection containing that word or phrase, the app returns the title and lyrics. It also has an about section for the group, as well as a section with illustrations and a brief rundown of each member.
 
-The key difference between the mobile and tablet/desktop version will be the mobile navigation menu that pops up full screen. The Tablet and Desktop versions will have individual links in the navigation instead of the hamburger icon.
+The key difference between the mobile and tablet/desktop version is that the mobile navigation menu pops up full screen. The Tablet and Desktop versions will have individual links in the navigation instead of the hamburger icon.
+
+I'm using the MusixMatch API to pull album data, mapping through it and returning new objects containing the song tite and track ID. Then, I'm using the track ID to make a second API call by inserting it into the url and pulling the lyrics for each song. Then, using a forEach function, I loop through the data and create an array of objects with the song title and lyrics string for each song.
 
 ## API Snippets
 
@@ -102,41 +104,42 @@ The key difference between the mobile and tablet/desktop version will be the mob
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-| Component         |                                                                    Description                                                                     |
-| ----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------: |
-| App               | This will make the initial data pull and include React Router. This will be the landing page where the form is located, along with the navigation. |
-| Results           |                                              This will contain the result listings that are returned.                                              |
-| Header            |                                                    This will render the header include the nav                                                     |
-| Form              |                                 This will be where the user inputs the word/phrase. It will live on the home page.                                 |
-| About             |                            This component will be linked from the navigation and contain general info about the group.                             |
-| Members           |                                                    This component will house the member cards.                                                     |
-| Member            |                                        This component will house the content for each member of the group.                                         |
-| Data Manipulation |   This component will house the manipulation of the data and the functions needed to work with the API. I will not really appear on the screen.    |
+| Component |                                                                                             Description                                                                                              |
+| --------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| App       |                         Makes the initial data pull and includes React Router. This will be the landing page with the site title. Contains navigation and welcome component.                         |
+| Welcome   |                                                                 Contains a welcome card with the site title, and a link to the form.                                                                 |
+| Results   |                                                                        Contains a UL where the search results are displayed.                                                                         |
+| Result    |                                                                         Contains the individual list items for the results.                                                                          |
+| Form      |                                                                                Where the user inputs the word/phrase.                                                                                |
+| About     |                                                                     Contain general info about the group. (cited from Wikipedia)                                                                     |
+| Members   | Houses cards for each member of the group. The cards contain an illustration of each member, their name, and a descriptive sub title. Each card is a link to the respective member's Wikipedia page. |
 
 ## Time Priority Table
 
-| Component               | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ----------------------- | :------: | :------------: | :------------: | :---------: |
-| Planning                |    H     |      6hrs      |      4hrs      |             |
-| App                     |    H     |      4hrs      |                |             |
-| About                   |    H     |      3hrs      |                |             |
-| Members                 |    H     |      5hrs      |                |             |
-| Mobile Nav              |    H     |      3hrs      |                |             |
-| Member                  |    H     |      2hrs      |                |             |
-| Working with API        |    H     |      8hrs      |                |             |
-| Data Manipulation       |    H     |     12hrs      |                |             |
-| Styling                 |    M     |      4hrs      |                |             |
-| Adding Links To Members |    L     |      1hrs      |                |             |
-| Total                   |          |     48hrs      |      4hrs      |             |
+| Component               | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------- | :------: | :------------: | :-----------: | :---------: |
+| Planning                |    H     |      6hrs      |     4hrs      |    4hrs     |
+| App                     |    H     |      4hrs      |     10hrs     |    10hrs    |
+| About                   |    H     |      3hrs      |     1hrs      |    1hrs     |
+| Members                 |    H     |      5hrs      |     3hrs      |    3hrs     |
+| Mobile Nav              |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Working with API        |    H     |      8hrs      |     10hrs     |    10hrs    |
+| Data Manipulation       |    H     |     12hrs      |     14hrs     |    14hrs    |
+| Styling                 |    M     |      4hrs      |     4hrs      |    4hrs     |
+| Adding Links To Members |    L     |      1hrs      |     10min     |    10min    |
+| Total                   |          |     48hrs      |  50hrs 10min  | 50hrs 10min |
 
-## Additional Libraries
+## Additional Libraries/Tools
 
-Scss
+SCSS
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
+There are other bits of could that I'm more proud of, but definitely took more than ten lines, but this snippet is pretty special too. This is how I was able to toggle between showing the form and the results upon the form submission, rather than having them both on the same page. I had spent a long time trying to figure this out, and it was really late at night when I finally landed on this simple solution. I'd been trying to link to another componenent, but it rerendered the array of data I needed to show when I used {Link}, so state worked perfectly.
 
 ```
+{toggleResults === true ? (
+    <Results resultsString={resultsString} resultsArr={resultsArr} />
+    ) : ("")}
 
 ```

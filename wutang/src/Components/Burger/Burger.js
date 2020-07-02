@@ -1,4 +1,5 @@
 import React from "react";
+import "./Burger.scss";
 
 export default function Burger({ open, setOpen }) {
   return (

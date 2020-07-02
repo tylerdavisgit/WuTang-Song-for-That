@@ -1,0 +1,54 @@
+#members-page {
+  background-color: rgb(211, 160, 20);
+  padding-bottom: 40px;
+}
+#members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  animation: transitionIn 2s;
+  .member-card {
+    height: 350px;
+    width: 250px;
+    border: 2px solid white;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.5s;
+  }
+  .member-card:hover {
+    background-color: black;
+    color: rgb(211, 160, 20);
+    text-shadow: 2px 2px 2px white;
+  }
+
+  h2 {
+    text-shadow: 2px 2px 1px black;
+  }
+  h3 {
+    text-shadow: 2px 2px 1px black;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  img {
+    height: 200px;
+  }
+  button {
+    height: 40px;
+    width: 100px;
+    margin-top: 25px;
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+  }
+  button:hover {
+    background-color: rgb(211, 160, 20);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+  }
+}

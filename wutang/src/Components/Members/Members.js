@@ -1,14 +1,16 @@
 import React from "react";
+import "./Members.scss";
 import { Link } from "react-router-dom";
 
 export default function Members() {
-  function refresh() {
-    window.location.reload(false);
-  }
   return (
     <div id="members-page">
       <div id="members">
-        <a href="https://en.wikipedia.org/wiki/RZA" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/RZA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>RZA</h2>
             <h3>THE LEADER</h3>
@@ -18,7 +20,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/GZA" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/GZA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>GZA</h2>
             <h3>THE ELDER</h3>
@@ -31,6 +37,7 @@ export default function Members() {
         <a
           href="https://en.wikipedia.org/wiki/Ol%27_Dirty_Bastard"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="member-card">
             <h2>OL DIRTY BASTARD</h2>
@@ -41,7 +48,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Method_Man" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/Method_Man"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>METHOD MAN</h2>
             <h3>YOUNG BLOOD</h3>
@@ -51,7 +62,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Raekwon" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/Raekwon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>RAEKWON</h2>
             <h3>THE CHEF</h3>
@@ -64,6 +79,7 @@ export default function Members() {
         <a
           href="https://en.wikipedia.org/wiki/Ghostface_Killah"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="member-card">
             <h2>GHOSTFACE KILLAH</h2>
@@ -74,7 +90,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Inspectah_Deck" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/Inspectah_Deck"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>INSPECTAH DECK</h2>
             <h3>METAPHOR</h3>
@@ -84,7 +104,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/U-God" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/U-God"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>U-GOD</h2>
             <h3>LOW KEY</h3>
@@ -94,7 +118,11 @@ export default function Members() {
             />
           </div>
         </a>
-        <a href="https://en.wikipedia.org/wiki/Masta_Killa" target="_blank">
+        <a
+          href="https://en.wikipedia.org/wiki/Masta_Killa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="member-card">
             <h2>MASTA KILLA</h2>
             <h3>THE ORATOR</h3>
