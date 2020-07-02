@@ -5,7 +5,7 @@
 ## Project Links
 
 - [Git Repo](https://github.com/tylerdavisgit/WuTang-Song-for-That)
-- [Wutang for That (Netlify)](https://www.wutangforthat.com/)
+- [Wutang for That (Netlify)](https://mystifying-payne-39a2f5.netlify.app)
 
 ## Project Description
 

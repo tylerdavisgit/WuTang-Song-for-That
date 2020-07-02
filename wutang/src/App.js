@@ -53,11 +53,10 @@ function App() {
   useEffect(() => {
     const corsPrefixUrl = `https://cors-anywhere.herokuapp.com/`;
     const apiKey = process.env.REACT_APP_WUTANG_API_KEY;
-
     const albumUrl = `${corsPrefixUrl}https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=20422443&page=1&apikey=${apiKey}`;
 
     gatherTrackInfo(corsPrefixUrl, apiKey, albumUrl);
-  });
+  }, []);
 
   const gatherTrackInfo = async (corsPrefixUrl, apiKey, albumUrl) => {
     const res = await fetch(albumUrl);
