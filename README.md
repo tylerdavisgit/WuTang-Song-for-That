@@ -89,20 +89,16 @@ I'm using the MusixMatch API to pull album data, mapping through it and returnin
 
 #### MVP
 
-- Must properly route data as to conduct search of lyrics
-- Must build all components to have basic structure
-- The user search must return the Lyrics, and Title of the song containing their search query.
+- Must properly route data as to conduct search of lyrics: completed
+- Must build all components to have basic structure: completed
+- The user search must return the Lyrics, and Title of the song containing their search query: completed
 
 #### PostMVP
 
-- The members page should have links to their respective wikipedia pages
-- the styling should perfectly match the wireframes
+- The members page should have links to their respective wikipedia pages: completed
+- the styling should perfectly match the wireframes: completed, but changed the color scheme to black and yellow
 
 ## Components
-
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
 | Component |                                                                                             Description                                                                                              |
 | --------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -135,7 +131,7 @@ SCSS
 
 ## Code Snippet
 
-There are other bits of could that I'm more proud of, but definitely took more than ten lines, but this snippet is pretty special too. This is how I was able to toggle between showing the form and the results upon the form submission, rather than having them both on the same page. I had spent a long time trying to figure this out, and it was really late at night when I finally landed on this simple solution. I'd been trying to link to another componenent, but it rerendered the array of data I needed to show when I used {Link}, so state worked perfectly.
+There are other bits of could that I'm more proud of, but definitely took more than ten lines, but this snippet is pretty special too. This is how I was able to toggle between showing the form and the results upon the form submission, rather than having them both on the same page. I had spent a long time trying to figure this out, and it was really late at night when I finally landed on this simple solution. I'd been trying to link to another componenent, but it rerendered the array of data I needed to show when I used {Link}, so using state to toggle onClick worked perfectly.
 
 ```
 {toggleResults === true ? (
