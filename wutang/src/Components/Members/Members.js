@@ -133,7 +133,7 @@ export default function Members() {
           </div>
         </a>
         <button>
-          <Link to="/form" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             HOME
           </Link>
         </button>

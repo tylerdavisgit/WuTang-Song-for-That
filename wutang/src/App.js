@@ -6,10 +6,10 @@ import Members from "./Components/Members/Members";
 import Burger from "./Components/Burger/Burger";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
 import Results from "./Components/Results/Results";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, withRouter } from "react-router-dom";
 import Welcome from "./Components/Welcome/Welcome";
 
-function App() {
+function App(props) {
   // Toggle Mobile Nav
   const [open, setOpen] = useState(false);
 
@@ -18,8 +18,6 @@ function App() {
   };
 
   // Functionality States
-  const [submitFormHide, setSubmitFormHide] = useState(false);
-  const [toggleResults, setToggleResults] = useState(false);
   const [search, setSearch] = useState("");
   const [songArr, setSongArr] = useState([]);
   const [resultsArr, setResultsArr] = useState([]);
@@ -39,15 +37,18 @@ function App() {
     } else {
       setResultsString(search);
     }
-    setToggleResults(true);
     console.log(results);
     console.log(resultsString);
-    setSubmitFormHide(true);
+    props.history.push("/results");
   };
 
   const handleChange = (e) => {
     const search = e.target.value;
     setSearch(search);
+  };
+
+  const backToForm = () => {
+    props.history.push("/form");
   };
 
   useEffect(() => {
@@ -56,7 +57,8 @@ function App() {
     const albumUrl = `${corsPrefixUrl}https://api.musixmatch.com/ws/1.1/album.tracks.get?album_id=20422443&page=1&apikey=${apiKey}`;
 
     gatherTrackInfo(corsPrefixUrl, apiKey, albumUrl);
-  }, []);
+    window.scrollTo(0, 0);
+  });
 
   const gatherTrackInfo = async (corsPrefixUrl, apiKey, albumUrl) => {
     const res = await fetch(albumUrl);
@@ -110,13 +112,6 @@ function App() {
           </Link>
         </ul>
       </nav>
-
-      {toggleResults === true ? (
-        <Results resultsString={resultsString} resultsArr={resultsArr} />
-      ) : (
-        ""
-      )}
-
       <Switch>
         <Route exact path="/" component={Welcome} />
         <Route
@@ -126,11 +121,23 @@ function App() {
             <Form
               handleSubmit={handleSubmit}
               handleChange={handleChange}
-              submitFormHide={submitFormHide}
+              {...routerProps}
             />
           )}
         />
-        <Route exact path="/results" component={Results} />
+        <Route
+          exact
+          path="/results"
+          // component={Results}
+          render={(routerProps) => (
+            <Results
+              resultsArr={resultsArr}
+              resultsString={resultsString}
+              backToForm={backToForm}
+              {...routerProps}
+            />
+          )}
+        />
         <Route exact path="/about" component={About} />
         <Route exact path="/members" component={Members} />
       </Switch>
@@ -138,4 +145,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

@@ -5,6 +5,7 @@
   align-items: center;
   margin-top: -20px;
   padding-top: 20px;
+  background-color: rgb(211, 160, 20);
 }
 
 #form-call-to-action {
@@ -36,7 +37,7 @@ form {
     word-spacing: -2px;
     font-weight: 600;
   }
-  button {
+  #submit {
     height: 35px;
     width: 60%;
     font-size: 20px;
@@ -49,7 +50,7 @@ form {
     text-shadow: 2px 2px 1px rgb(211, 160, 20);
     transition: 0.5s;
   }
-  button:hover {
+  #submit:hover {
     border: 2px solid white;
     color: black;
     background-color: rgb(211, 160, 20);
